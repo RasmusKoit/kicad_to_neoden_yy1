@@ -1,0 +1,20 @@
+NEODEN,YY1,P&P FILE,,,,,,,,,,
+,,,,,,,,,,,,
+PanelizedPCB,UnitLength,0,UnitWidth,0,Rows,1,Columns,1,,,,
+,,,,,,,,,,,,
+Fiducial,1-X,76.02,1-Y,40.21,OverallOffsetX,0,OverallOffsetY,0,,,,
+,,,,,,,,,,,,
+NozzleChange,OFF,BeforeComponent,1,Head1,Drop,Station1,PickUp,Station1,,,,
+NozzleChange,OFF,BeforeComponent,1,Head1,Drop,Station1,PickUp,Station1,,,,
+NozzleChange,OFF,BeforeComponent,1,Head1,Drop,Station1,PickUp,Station1,,,,
+NozzleChange,OFF,BeforeComponent,1,Head1,Drop,Station1,PickUp,Station1,,,,
+,,,,,,,,,,,,
+Designator,Comment,Footprint,Mid X(mm),Mid Y(mm) ,Rotation,Head ,FeederNo,Mount Speed(%),Pick Height(mm),Place Height(mm),Mode,Skip
+C1,Capacitor,C_0603_1608Metric,4.12,7,-90,1,1,100,0,0.2,1,0
+FB1,FerriteBead,L_0603_1608Metric,6.394375,18.736875,90,1,9,100,0,0.2,1,0
+FL1,Filter,2450LP14A100T,12.445,24.825,0,1,10,100,0,0.2,1,0
+J1,Connector,U.FL_Hirose_U.FL-R-SMT-1_Vertical,16.77,29.525,90,2,18,100,0,0.2,1,0
+L1,Inductor,L_0603_1608Metric,17.6825,19.425,180,1,12,100,0,0.2,1,0
+U1,Chip,RFX2401C_SKY,9.795,22.748901,90,2,19,100,0,0.2,1,0
+U2,Chip,CYW89820,12.795,11.2625,180,2,22,100,0,0.2,1,0
+Y1,Crystal,Crystal_SMD_2016-4Pin_2.0x1.6mm,4.72,11.5,90,1,13,100,0,0.2,1,0
