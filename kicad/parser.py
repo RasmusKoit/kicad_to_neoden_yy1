@@ -138,7 +138,8 @@ class KicadParser:
         bom_comp = self.__parse_bom_file(bom_reader) if bom_reader else None
         pos_comp = self.__parse_pos_file(pos_reader)
         self.components = self.__combine_components(pos_comp, bom_comp)
-        
+
+
 if __name__ == "__main__":
     pos_path = Path("examples/rev3.2-top-pos.csv")  # Change to your input file path
     bos_path = Path("examples/rev3.2.csv")  # Change to your BOM file path if needed

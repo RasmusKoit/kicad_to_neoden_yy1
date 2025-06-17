@@ -47,8 +47,7 @@ def main():
     feeders.show_feeders()
     writer = Writer(components=sorted_components, output=output_file)
     writer.create_file()
-    
-    
+
 
 def validate_file(file_path: Path, is_input: bool, is_required: bool):
     if not file_path.exists() and is_input and is_required:

@@ -195,7 +195,7 @@ class ComponentInfo:
             if component_type in types:
                 components[package] = types[component_type]
         return components
-    
+
     def get_package(self, descriptor: str) -> str | None:
         """
         Get the package name from a descriptor string.
@@ -285,8 +285,6 @@ class KicadComponent:
         if headNo < 1 or headNo > 4:
             raise ValueError("Head number must be between 1 and 4.")
         self.head = headNo
-    
-    
 
 
 if __name__ == "__main__":
