@@ -1,7 +1,6 @@
 from kicad import KicadComponent
 from pathlib import Path
 import csv
-import os
 
 class Writer:
     def __init__(

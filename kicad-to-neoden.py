@@ -1,6 +1,6 @@
 from argparse import ArgumentParser
 from pathlib import Path
-from kicad import KicadParser, KicadComponent
+from kicad import KicadParser
 from neoden import Feeders, Writer
 
 
