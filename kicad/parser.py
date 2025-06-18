@@ -116,7 +116,10 @@ class KicadParser:
                 combined_components.add(pos)
             else:
                 if bom:
-                    combined_components.add(
+                    chosen_height = None
+                    if bom.height != '' and bom.height is not None:
+                        chosen_height = bom.height
+                    combined_components.add(                        
                         KicadComponent(
                             ref=pos.ref,
                             val=pos.val,
@@ -125,7 +128,7 @@ class KicadParser:
                             pos_y=pos.pos_y,
                             rot=pos.rot,
                             side=pos.side,
-                            height=bom.height if bom.height != "" else 0,
+                            height=chosen_height
                         )
                     )
         return combined_components
@@ -137,6 +140,8 @@ class KicadParser:
         )
         bom_comp = self.__parse_bom_file(bom_reader) if bom_reader else None
         pos_comp = self.__parse_pos_file(pos_reader)
+        # for comp in pos_comp:
+        #     print(comp)
         self.components = self.__combine_components(pos_comp, bom_comp)
 
 

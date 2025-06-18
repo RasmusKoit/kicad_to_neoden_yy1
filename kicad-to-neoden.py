@@ -44,7 +44,6 @@ def main():
     sorted_components = sorted(
         components, key=lambda c: (getattr(c, "feederNo", 0), str(c.ref))
     )
-    feeders.show_feeders()
     writer = Writer(components=sorted_components, output=output_file)
     writer.create_file()
 
