@@ -1,0 +1,12 @@
+[project]
+name = "kicad-to-neoden-yy1"
+version = "0.1.0"
+description = "Convert KiCad position and BOM files to Neoden YY1 pick-and-place format, with automatic feeder assignment and a printable feeder sheet."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "reportlab>=4",  # only used by the --pdf feeder loading sheet
+]
+
+[tool.uv]
+package = false

@@ -24,8 +24,10 @@ class KicadParser:
             "SwitchHole",
             "MouseBite",
         }
-        if any(word in component.val for word in ignore_words) or any(
-            word in component.package for word in ignore_words
+        val = component.val or ""
+        package = component.package or ""
+        if any(word in val for word in ignore_words) or any(
+            word in package for word in ignore_words
         ):
             return False
 
@@ -130,6 +132,10 @@ class KicadParser:
                             side=pos.side,
                             height=chosen_height
                         )
+                    )
+                else:
+                    print(
+                        f"Warning: {pos.ref} ({pos.val} {pos.package}) is not in the BOM, skipping."
                     )
         return combined_components
 

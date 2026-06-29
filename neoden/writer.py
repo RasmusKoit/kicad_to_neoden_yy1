@@ -8,12 +8,15 @@ class Writer:
         self,
         components: list[KicadComponent],
         output: Path,
+        output_dir: Path,
     ):
         self.components = components
         self.output = output
+        self.output_dir = output_dir
 
     def create_file(self):
-        with open(self.output, "w", newline="") as outfile:
+        output_path = self.output_dir / self.output
+        with open(output_path, "w", newline="") as outfile:
             writer = csv.writer(outfile)
             writer.writerow(
                 ["NEODEN", "YY1", "P&P FILE", "", "", "", "", "", "", "", ""]
